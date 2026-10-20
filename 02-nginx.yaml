@@ -1,0 +1,13 @@
+- name: install and run nginx
+  hosts: web
+  become: yes # become root user
+  tasks:
+  - name: install nginx 
+    ansible.builtin.dnf:  # if you use yum it will only work for RedHat
+      name: nginx
+      state: latest
+  - name: start nginx
+    ansible.builtin.service:
+      name: nginx
+      state: started
+      enabled: yes
