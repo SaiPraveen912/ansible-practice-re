@@ -1,0 +1,14 @@
+- name: variables form inventory
+  hosts: localhost
+  tasks:
+  - name: inventory variables
+    ansible.builtin.debug:
+      msg: "I am learning {{Course}}, trainer is {{Trainer}} duration is {{Duration}}"
+
+# In inventory.ini
+# [localhost:vars]
+# Course="Devops with AWS"
+# Trainer="Sai Praveen"
+# Duration="120hrs"
+
+# Variables for localhost declared in inventory.ini
