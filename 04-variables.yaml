@@ -1,6 +1,6 @@
 - name: variables
   hosts: localhost
-  vars:
+  vars: # Play level variables declaration
     Course: "Ansible"
     Trainer: "Praveen"
     Duration: "120hrs"
