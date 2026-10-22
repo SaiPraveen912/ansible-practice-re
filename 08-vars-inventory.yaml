@@ -2,8 +2,10 @@
   hosts: localhost
   tasks:
   - name: inventory variables
+    vars:
+      Timings: "7:15 AM"
     ansible.builtin.debug:
-      msg: "I am learning {{Course}}, trainer is {{Trainer}} duration is {{Duration}}"
+      msg: "I am learning {{Course}}, trainer is {{Trainer}} duration is {{Duration}} timing {{Timings}}"
 
 # In inventory.ini
 # [localhost:vars]
