@@ -20,5 +20,6 @@
 # 3rd preference is from vars.yaml
 # 4th preference is from prompt
 # 5th preference is from Play level variables
+# 6th preference is from inventory.ini file
 
 
