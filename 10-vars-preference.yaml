@@ -17,3 +17,4 @@
 
 # 1st preference is variables fro args command line
 # 2nd preference is task level variables
+# 3rd preference is from vars file
