@@ -66,7 +66,7 @@
   tasks:
   - name: before convert list/items
     ansible.builtin.debug:
-      msg: "{{my_items}}"
+      msg: "Before convert {{my_items}}"
   - name: after convert list/items to dictionary
     ansible.builtin.debug:
-      msg: "{{my_items | items2dict}}"
+      msg: "After convert {{my_items | items2dict}}"
