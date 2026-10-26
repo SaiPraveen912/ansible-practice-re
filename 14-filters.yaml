@@ -31,3 +31,12 @@
   - name: remove duplicate numbers
     ansible.builtin.debug:
       msg: "{{numbers | unique }}"  # | unique is used to remove duplicates
+
+- name: print min and max
+  hosts: localhost
+  vars:
+    ages: [25, 35, 67, 89]
+  tasks:
+  - name: print min and max
+    ansible.builtin.debug:
+      msg: "Minimum age: {{ ages | min }}, and Maximum age: {{ ages | max }}"
