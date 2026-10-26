@@ -1,0 +1,12 @@
+- name: install packages
+  hosts: web
+  become: yes # become root user
+  tasks:
+  - name: install packages
+    ansible.builtin.dnf:
+      name: item
+      state: latest
+    loop:
+    - nginx
+    - mysql
+    - postfix
