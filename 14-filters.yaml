@@ -3,7 +3,7 @@
   tasks:
   - name: print default value
     ansible.builtin.debug:
-      msg: "Hello {{course | default('Ansible') }}"
+      msg: "Hello {{course | default('Ansible') }}" # | default('ansible') --> Provide default value in case you forget
 
 - name: upper case
   hosts: localhost
@@ -12,7 +12,7 @@
   tasks:
   - name: convert into uppercase
     ansible.builtin.debug:
-      msg: "{{ greeting | upper }}"
+      msg: "{{ greeting | upper }}" # | upper --> To convert string to upper case
 
 - name: lower case
   hosts: localhost
@@ -21,4 +21,12 @@
   tasks:
   - name: convert into lowercase
     ansible.builtin.debug:
-      msg: "{{ greeting | lower }}"
+      msg: "{{ greeting | lower }}" # | lower --> To convert string to lower case
+
+- name: remove duplicates
+  hosts: localhost
+  numbers: [1, 2, 3, 3, 4, 4, 5]
+  task:
+  - name: remove duplicate numbers
+    ansible.builtin.debug:
+      msg: "{{numbers | unique }}"  # | unique is used to remove duplicates
