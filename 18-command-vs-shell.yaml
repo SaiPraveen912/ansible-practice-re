@@ -10,3 +10,6 @@
 # simple commands without the need of shell variables, environment and features like redirections, pipes go for command module
 
 # if we need to run complex commands or scripts go for shell module
+
+# What works in command module will also work in shell module
+# But what works in shell module may not work in command module we don’t have guarantee if it will work or not
